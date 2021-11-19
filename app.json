@@ -7,23 +7,56 @@
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "resizeMode": "cover",
+      "backgroundColor": "#78e08f"
     },
     "updates": {
-      "fallbackToCacheTimeout": 0
+      "fallbackToCacheTimeout": 10000
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "br.com.appjusto.test",
+      "associatedDomains": ["applinks:test.appjusto.com.br"]
     },
     "android": {
+      "package": "br.com.appjusto.test",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "intentFilters": [
+        {
+          "autoVerify": false,
+          "action": "VIEW",
+          "data": {
+            "scheme": "https",
+            "host": "test.appjusto.com.br",
+            "pathPrefix": "/deeplink2"
+          },
+          "category": ["BROWSABLE", "DEFAULT"]
+        },
+        {
+          "autoVerify": false,
+          "action": "VIEW",
+          "data": {
+            "scheme": "https",
+            "host": "test.appjusto.com.br",
+            "pathPrefix": "/deeplink"
+          },
+          "category": ["BROWSABLE", "DEFAULT"]
+        },
+        {
+          "autoVerify": false,
+          "action": "VIEW",
+          "data": {
+            "scheme": "https",
+            "host": "test.appjusto.com.br",
+            "pathPrefix": "/other-deeplink"
+          },
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
