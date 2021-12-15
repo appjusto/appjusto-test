@@ -1,6 +1,6 @@
 {
   "cli": {
-    "version": ">= 0.36.1"
+    "version": ">= 0.41.0"
   },
   "build": {
     "development": {
@@ -8,7 +8,11 @@
       "distribution": "internal"
     },
     "preview": {
-      "distribution": "internal"
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "expoCli": "5.0.0-rc.3"
     },
     "production": {}
   },
