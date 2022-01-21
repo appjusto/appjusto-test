@@ -2,6 +2,7 @@
   "expo": {
     "name": "appjusto-test",
     "slug": "appjusto-test",
+    "scheme": "appjusto-test",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
